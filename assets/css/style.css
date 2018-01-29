@@ -4,7 +4,7 @@ h1, h2, h3 {
     font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
 
-p, a {
+p, a, label, textarea {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 14px;
     color: #666666;
@@ -16,6 +16,11 @@ body {
 }
 
 /* Header Styles */
+
+.header {
+    width: 960px;
+    margin: auto;
+}
 
 .header #links a:hover {color: #8ab70f;}
 
@@ -32,11 +37,6 @@ body {
     padding-bottom: 20px;
 }
 
-.header {
-    width: 960px;
-    margin: auto;
-}
-
 h1 {
     color: #ffffff;
     text-align: center;
@@ -50,7 +50,7 @@ h1 {
     float: left;
 }
 
-    /* Nav Bar Selectors */
+    /* Nav Bar */
 ul {
     list-style-type: none;
     margin: 0;
@@ -65,6 +65,11 @@ li {
 }
 
 /* Content Styles */
+
+.container {
+    width: 960px;
+    margin: auto;
+}
 
 h2 {
     padding-left: 20px;
@@ -108,57 +113,86 @@ hr {
 }
 
     /* PORTFOLIO ONLY */
+.portfolio_img {
+    width: 250px;
+    margin: auto;
+    padding: 20px;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* <= IE8 */
+    border-radius: 25px;
+}
+
+.portfolio_img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity); /* <= IE8 */
+}
+
+.portfolio_img_box {
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.portfolio_label {
+    position: absolute;
+    width: 250px;
+    color: #ffffff;
+    background-color: #4aaaab;
+    height: 30px;
+    bottom: 30px;
+    margin-left: 29.5px;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* <= IE8 */
+    line-height: 30px;
+}
 
 .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
+    margin-bottom: 20px;
 }
 
 .column {
     flex: 50%;
     padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-}
-
-.portfolio-img {
-    display: block;
-    width: 250px;
-    padding: 20px;
-    margin: auto;
-   
-}
-
-.port_img_container {
-    width: 50%;
-    position: relative;
-    float: left;
     text-align: center;
 }
 
-.bottom {
-    position: absolute;
-    color: #ffffff;
-    left: 0;
-    right: 0;
-    bottom: 25px;
-    background-color: #4aaaab;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    width: 250px;
-    margin-left: 30px;
-    height: 30px;
-    line-height: 30px;
+    /* CONTACT ONLY */
+textarea, input[type=text] {
+    width: 90%;
+    padding: 12px 10px;
+    margin: 8px 30px;
+    box-sizing: border-box;
+    display: block;
 }
 
-.container {
-    width: 960px;
-    margin: auto;
+label {
+    margin-left: 30px;
+    font-weight: bolder;
 }
+
+input[type=submit] {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: none;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* <= IE8 */
+}
+
+textarea {
+    height: 200px;
+    resize: vertical;
+}
+
 
 /* Connect Icons Only */
 img {
